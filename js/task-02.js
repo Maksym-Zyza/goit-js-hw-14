@@ -16,9 +16,5 @@ const listItems = ingredients.map((item) => {
   listItem.className = item;
   return listItem;
 });
-
-listItems.forEach((item) => ingredientsList.append(item));
-
-[...ingredientsList.children].forEach((el) => {
-  console.log(el.outerHTML);
-});
+ingredientsList.append(...listItems);
+console.log(ingredientsList.innerHTML);
